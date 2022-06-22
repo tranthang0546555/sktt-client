@@ -42,7 +42,9 @@ function Room({ codeRoom }) {
 
     useEffect(() => {
 
-        socket.current = io('http://localhost:5000', { transports: ['websocket'] });
+        // socket.current = io('http://localhost:5000', { transports: ['websocket'] });
+        socket.current = io('https://suckhoetamthan.herokuapp.com', { transports: ['websocket'] });
+
 
         navigator.mediaDevices
             .getUserMedia({ video: true, audio: true })
